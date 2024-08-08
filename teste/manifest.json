@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Data Extractor",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["result.html", "result.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

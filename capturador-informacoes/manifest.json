@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "Capturador de Informações da Página",
+    "version": "1.0",
+    "description": "Captura informações da página atual em formato JSON",
+    "permissions": [
+    "activeTab"
+    ],
+    "browser_action": {
+    "default_title": "Capturar informações"
+    },
+    "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+    }
+   }
